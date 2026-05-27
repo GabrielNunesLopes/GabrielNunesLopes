@@ -24,4 +24,6 @@ Desenvolvedor apaixonado por criar soluções limpas, eficientes e focadas na ex
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-nunes-lopes-40621b3b5/)
 [![E-mail](
+
+
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=GabrielNunesLopes&cache=false)](https://git.io/streak-stats)
