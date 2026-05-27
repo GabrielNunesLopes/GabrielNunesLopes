@@ -1,1 +1,1 @@
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Gabriel-1-2&cache=false)](https://git.io/streak-stats)
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=GabrielNunesLopes&cache=false)](https://git.io/streak-stats)
