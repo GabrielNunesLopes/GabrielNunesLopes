@@ -22,8 +22,14 @@ Desenvolvedor apaixonado por criar soluções limpas, eficientes e focadas na ex
 
 ## 📫 Conexões
 
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/bielz_hin/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-nunes-lopes-40621b3b5/)
+[![E-mail](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:gabrielnuneslopes2022@gmail.com)
 
+---
 
+<p align="center">
+  <i>"O código limpo sempre parece ter sido escrito por alguém que se importa." — Robert C. Martin</i>
+</p>
 
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=GabrielNunesLopes&cache=false)](https://git.io/streak-stats)
