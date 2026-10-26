@@ -1,0 +1,60 @@
+name: Profile assets
+
+# Regenerates the SVGs of the profile README:
+# - daily: the activity card, from the real contribution calendar;
+# - on changes to tools/: every static asset (header, cards, stack, footer).
+on:
+  schedule:
+    - cron: '17 9 * * *' # 06:17 in São Paulo
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['tools/**', '.github/workflows/profile-assets.yml']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-assets
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: tools/package-lock.json
+
+      - name: Install
+        working-directory: tools
+        run: npm ci --no-audit --no-fund
+
+      - name: Static assets
+        working-directory: tools
+        run: npm run build
+
+      - name: Activity card
+        working-directory: tools
+        env:
+          # Optional: a fine-grained token with no extra scopes in the
+          # PROFILE_STATS_TOKEN secret. The default token also works.
+          GH_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN || github.token }}
+        run: npm run activity
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- assets; then
+            echo "No asset changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          git commit -m "chore: update profile assets [skip ci]"
+          git push
